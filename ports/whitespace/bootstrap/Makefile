@@ -20,7 +20,7 @@ RUN_DEPENDS=	bsdsar:${PORTSDIR}/sysutils/bsdsar \
 		openntpd:${PORTSDIR}/net/openntpd \
 		perl5.10:${PORTSDIR}/lang/perl5.10 \
 		puppet:${PORTSDIR}/sysutils/puppet \
-		python:${PORTSDIR}/lang/python27 \
+		python27:${PORTSDIR}/lang/python27 \
 		rsync:${PORTSDIR}/net/rsync \
 		rdate:${PORTSDIR}/sysutils/rdate \
 		sudo:${PORTSDIR}/security/sudo \
