@@ -33,8 +33,7 @@ RUN_DEPENDS=	bsdsar:${PORTSDIR}/sysutils/bsdsar \
 # Don't let stupid programs ask for configuration.
 
 BATCH=		YES
-APACHE_COMPAT=	YES
-NO_BUILD=	yes
+NO_BUILD=	YES
 
 postinstall:
 
