@@ -1,0 +1,19 @@
+Whitespace.io -- Bootstrap
+
+This is a meta port that installs the base packages for every Whitespace
+server. Here is the current list of packages installed:
+
+* BSDsar
+* Bash
+* EzJail
+* Git
+* OpenNTPd
+* Perl 5.10
+* Puppet
+* Python 2.7
+* Rsync
+* Rdate
+* Sudo
+* Tmux
+* Vim
+* zsh
