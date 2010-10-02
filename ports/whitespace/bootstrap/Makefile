@@ -19,7 +19,7 @@ RUN_DEPENDS=	bsdsar:${PORTSDIR}/sysutils/bsdsar \
 		git:${PORTSDIR}/devel/git \
 		openntpd:${PORTSDIR}/net/openntpd \
 		perl5.10:${PORTSDIR}/lang/perl5.10 \
-		puppet:${PORTSDIR}/sysutils/puppet \
+		ruby-gems:${PORTSDIR}/devel/ruby-gems \
 		python27:${PORTSDIR}/lang/python27 \
 		rsync:${PORTSDIR}/net/rsync \
 		rdate:${PORTSDIR}/sysutils/rdate \
@@ -31,11 +31,11 @@ RUN_DEPENDS=	bsdsar:${PORTSDIR}/sysutils/bsdsar \
 
 
 # Don't let stupid programs ask for configuration.
-
 BATCH=		YES
 NO_BUILD=	YES
 
-postinstall:
+post-install:
+	/usr/local/bin/gem install chef --no-ri --no-rdoc
 
 do-install:
 
