@@ -3,7 +3,7 @@
 # $Id: Makefile,v 1.1.1.1 2008/03/24 17:13:30 asenchi Exp $
 #
 
-PORTNAME=	whitespace-bootstrap
+PORTNAME=	bootstrap-station
 PORTVERSION=	0.1
 PORTREVISION=	0
 CATEGORIES=	misc
@@ -19,10 +19,10 @@ RUN_DEPENDS=	bsdsar:${PORTSDIR}/sysutils/bsdsar \
 		git:${PORTSDIR}/devel/git \
 		openntpd:${PORTSDIR}/net/openntpd \
 		perl5.10:${PORTSDIR}/lang/perl5.10 \
-		ruby-gems:${PORTSDIR}/devel/ruby-gems \
 		python27:${PORTSDIR}/lang/python27 \
-		rsync:${PORTSDIR}/net/rsync \
 		rdate:${PORTSDIR}/sysutils/rdate \
+		redis:${PORTSDIR}/databases/redis \
+		rsync:${PORTSDIR}/net/rsync \
 		sudo:${PORTSDIR}/security/sudo \
 		tmux:${PORTSDIR}/sysutils/tmux \
 		vim:${PORTSDIR}/editors/vim \
@@ -35,7 +35,7 @@ BATCH=		YES
 NO_BUILD=	YES
 
 post-install:
-	/usr/local/bin/gem install chef --no-ri --no-rdoc
+	echo 'security.jail.allow_raw_sockets=1' >> /etc/sysctl.conf
 
 do-install:
 
